@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+Create a Receipt
+{% endblock title %}
+{% block content %}
+<div>
+    <h1>Create Receipt</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>Create</button>
+    </form>
+</div>
+{% endblock content %}
