@@ -17,16 +17,15 @@
         <nav>
             <ul>
                 {% if user.is_authenticated %}
-                <li>
-                    <a href="{% url 'logout' %}"></a>
-                </li>
-                {% end if %}
-                <li>
-                    <a href="{% url 'signup' %}"></a>
-                </li>
-                <li>
-                    <a href="{% url 'login' %}"></a>
-                </li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'account_list' %}">Account List</a></li>
+                <li><a href="{% url 'create_account' %}">Create Account</a></li>
+                <li><a href="{% url 'category_list' %}">Category List</a></li>
+                <li><a href="{% url 'create_category' %}">Create Category</a></li>
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                {% endif %}
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
             </ul>
         </nav>
     </header>

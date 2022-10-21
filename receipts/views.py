@@ -8,7 +8,7 @@ from .forms import CreateReceiptForm, CreateCategoryForm, CreateAccountForm
 
 @login_required
 def receipt_list(request):
-    receipt = Receipt.objects.filter(User_purchaser=request.user)
+    receipt = Receipt.objects.filter(purchaser=request.user)
     context = {
         "receipt_list": receipt,
     }
