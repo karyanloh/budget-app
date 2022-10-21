@@ -5,6 +5,7 @@ from .views import (
     category_list,
     account_list,
     create_category,
+    create_account,
 )
 
 urlpatterns = [
@@ -15,4 +16,5 @@ urlpatterns = [
     path(
         "receipts/categories/create/", create_category, name="create_category"
     ),
+    path("receipts/accounts/create/", create_account, name="create_account"),
 ]
